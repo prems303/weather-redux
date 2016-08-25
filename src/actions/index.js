@@ -1,23 +1,25 @@
 import request from 'superagent'
 
-export const receivePosts = (subreddit, posts) => {
+export const receivePosts = (cityName, posts) => {
+  console.log(posts)
   return {
     type: 'RECEIVE_POSTS',
-    posts: posts.map(post => post.data)
+    posts: posts.map(post => post)
   }
 }
 
 export function fetchPosts () {
   return (dispatch, getState) => {
-    const subreddit = getState().currentSubreddit
+    const cityName = getState().currentSubreddit
     return request
-      .get(`http://www.reddit.com/r/${subreddit}.json`)
+      // .get(`http://www.reddit.com/r/${cityName}.json`)
+      .get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=5f7bcf238dc7056a7325948af9cb61be`)
       .end((err, res) => {
         if (err) {
           return
         }
-        console.log(res.body.data)
-        dispatch(receivePosts(subreddit, res.body.data.children))
+        console.log([res.body])
+        dispatch(receivePosts(cityName, [res.body]))
       })
   }
 }

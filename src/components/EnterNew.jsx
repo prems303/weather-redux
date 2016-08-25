@@ -3,16 +3,16 @@ import {connect} from 'react-redux'
 import {enterNew, fetchPosts} from '../actions'
 
 function submitReddit (e, dispatch) {
-    if (e.keyCode === 13) {
-        dispatch(enterNew(e.currentTarget.value))
-        dispatch(fetchPosts())
-        e.currentTarget.value = ''
-    }
+  if (e.keyCode === 13) {
+    dispatch(enterNew(e.currentTarget.value))
+    dispatch(fetchPosts())
+    e.currentTarget.value = ''
+  }
 }
 
 let EnterNew = ({dispatch}) => (
     <input
-        placeholder="Enter a subreddit"
+        placeholder="Enter a cityName"
         onKeyUp={e => {
             submitReddit(e, dispatch)
         }}

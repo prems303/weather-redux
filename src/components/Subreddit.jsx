@@ -5,8 +5,7 @@ import Post from './Post'
 const Subreddit = ({subreddits}) => (
   <div>
       <Post
-        title={subreddits.name}
-        temp={1}
+        {...subreddits}
         />
   </div>
 )

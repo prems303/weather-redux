@@ -1,0 +1,12 @@
+body{
+  background: red;
+}
+
+app-container{
+  color: red;
+  border-top: 50px;
+}
+
+div{
+  color: red;
+}

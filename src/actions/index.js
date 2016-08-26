@@ -24,7 +24,8 @@ export function citySearch (evt, dispatch) {
 
 export function fetchWeather () {
   return (dispatch, getState) => {
-    const city = getState().citySearch
+    const city = getState().setSearch
+    console.log(city)
     return request
       .get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5f7bcf238dc7056a7325948af9cb61be`)
       .end((err, res) => {

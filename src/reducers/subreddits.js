@@ -1,9 +1,7 @@
-function subreddits (state = [], action) {
+function subreddits (state = {}, action) {
   switch (action.type) {
     case 'RECEIVE_POSTS':
-      return [
-        ...action.posts
-      ]
+      return action.posts
 
     default:
       return state

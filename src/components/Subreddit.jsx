@@ -4,17 +4,15 @@ import Post from './Post'
 
 const Subreddit = ({subreddits}) => (
   <div>
-    {subreddits.map((post, i) =>
       <Post
-        key={i}
-        title={post.name}
+        title={subreddits.name}
+        temp={1}
         />
-    )}
   </div>
 )
 
 Subreddit.propTypes = {
-  subreddits: PropTypes.array.isRequired
+  subreddits: PropTypes.object.isRequired
 }
 
 export default Subreddit

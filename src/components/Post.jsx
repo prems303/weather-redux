@@ -1,13 +1,11 @@
 import React, {PropTypes} from 'react'
-//trying to figure out how to add the time user story
-const Post = ({title},{time}) => (
-  <div>{title}{time}</div> 
+const Post = ({title, temp}) => (
+  <div>Name:{title} <br/> Temp:{temp}</div>
 )
-
 
 Post.propTypes = {
   title: PropTypes.string.isRequired,
-  time:PropTypes.string.isRequired
+  temp: PropTypes.number.isRequired
 }
 
 export default Post

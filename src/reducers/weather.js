@@ -9,7 +9,8 @@ function weather (state = {
     }
   ],
   sys: {
-    sunrise: ''
+    sunrise: 0,
+    sunset: 0
   }
 }, action) {
   switch (action.type) {

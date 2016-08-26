@@ -1,11 +1,11 @@
-function search (state = 'Auckland', action) {
+function setSearch (state = 'Auckland', action) {
   switch (action.type) {
     case 'SET_SEARCH':
-      return action.citySearch
+      return action.keyword
 
     default:
       return state
   }
 }
 
-export default search
+export default setSearch

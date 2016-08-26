@@ -2,3 +2,8 @@ app-container {
   color: black;
   border-top: 50px;
 }
+
+body {
+  color: grey;
+  font-size: 3em;
+}

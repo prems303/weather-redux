@@ -2,6 +2,14 @@ function weather (state = {
   name: '',
   main: {
     temp: 0
+  },
+  weather: [
+    {
+      main: ''
+    }
+  ],
+  sys: {
+    sunrise: ''
   }
 }, action) {
   switch (action.type) {

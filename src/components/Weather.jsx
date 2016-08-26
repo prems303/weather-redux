@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react'
 
 const Weather = ({weather}) => (
   <div>
-    {weather.name} : {weather.main.temp}
+    {weather.name} : {weather.main.temp-273.15}
   </div>
 )
 

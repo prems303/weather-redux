@@ -1,11 +1,18 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchWeather} from '../actions'
+import {fetchWeather, search, setSearch} from '../actions'
 
 let LoadWeather = ({dispatch}) => (
-  <button
-    onClick={e => dispatch(fetchWeather())}
-    >Load weather</button>
+  <div>
+    <input
+    type="text"
+    placeholder="Enter city name"
+    onKeyUp={evt => search(evt, dispatch)}
+    />
+    <button
+      onClick={e => dispatch(fetchWeather())}
+      >Load weather</button>
+  </div>
 )
 
 LoadWeather = connect()(LoadWeather)

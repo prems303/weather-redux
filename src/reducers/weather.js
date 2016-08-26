@@ -1,5 +1,5 @@
 function weather (state = {
-  name:'',
+  name: '',
   main: {
     temp: 0
   }

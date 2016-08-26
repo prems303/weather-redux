@@ -1,13 +1,13 @@
 import {connect} from 'react-redux'
 
-import Subreddit from '../components/Subreddit'
+import Weather from '../components/Weather'
 
 const mapStateToProps = (state) => {
   return {
-    subreddits: state.subreddits
+    weather: state.weather
   }
 }
 
 export default connect(
   mapStateToProps
-)(Subreddit)
+)(Weather)

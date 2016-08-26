@@ -1,12 +1,12 @@
 import React from 'react'
 
-import LoadSubreddit from './LoadSubreddit'
-import SubredditContainer from '../containers/SubredditContainer'
+import LoadWeather from './LoadWeather'
+import WeatherContainer from '../containers/WeatherContainer'
 
 const App = () => (
   <div className='app-container'>
-    <LoadSubreddit />
-    <SubredditContainer />
+    <LoadWeather />
+    <WeatherContainer />
   </div>
 )
 

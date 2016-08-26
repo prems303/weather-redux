@@ -3,10 +3,6 @@ body{
 }
 
 app-container{
-  color: red;
+  color: black;
   border-top: 50px;
-}
-
-div{
-  color: red;
 }

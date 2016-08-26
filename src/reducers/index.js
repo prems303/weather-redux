@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 
-import subreddits from './subreddits'
+import weather from './weather'
 
 export default combineReducers({
-  subreddits
+  weather
 })
